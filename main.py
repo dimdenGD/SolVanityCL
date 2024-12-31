@@ -340,10 +340,9 @@ def show_device():
 
     platforms = cl.get_platforms()
 
-    for p_index, platform_ in enumerate(platforms):
-        print(f"Platform {p_index}: {platform_.name}")
-
-        devices = platform_.get_devices()
+    for p_index, platform in enumerate(platforms):
+        print(f"Platform {p_index}: {platform.name}")
+        devices = platform.get_devices()
 
         for d_index, device in enumerate(devices):
             print(f"- Device {d_index}: {device.name}")
